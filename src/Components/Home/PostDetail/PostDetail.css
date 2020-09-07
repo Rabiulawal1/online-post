@@ -1,0 +1,8 @@
+.post{
+    border: 1px solid gray;
+    box-shadow: 10px 10px 10px blue;
+    width: 1300px;
+    margin: 15px;
+    background-color: rgb(179, 185, 201);
+    border-radius: 20px;
+}

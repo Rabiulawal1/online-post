@@ -1,0 +1,38 @@
+
+.header{
+    display: flex;
+    border-bottom: 2px solid gray;
+    background-image:linear-gradient(to right,white,rgb(253, 39, 75));
+}
+.logo{
+    width: 30%;
+   
+}
+.logo img{
+    height: 50px;
+    width: 150px;
+    margin-top: 5px;
+
+}
+.menu a{
+    text-decoration: none;    
+    margin-right: 50px;
+    font-weight: 700;
+    padding: 10px;
+    color: black;
+ 
+   
+}
+.menu a:hover{
+    background-color: gray;
+    color:white;
+    border-radius: 20px;
+}
+.menu{
+    width: 70%;
+    /* background-color: pink; */
+    height: auto;
+    text-align: right;
+    margin-top: 10px;
+   
+}

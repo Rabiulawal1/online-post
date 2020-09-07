@@ -1,0 +1,10 @@
+.postDisplay{
+    height: 200px;
+    display:flex;
+    width: 1300px;
+    border: 1px solid gold;
+    margin: 20px;
+    background-color: rgb(239, 224, 247);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px gray;
+}

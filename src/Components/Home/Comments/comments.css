@@ -1,0 +1,21 @@
+.commentBody{
+    display: flex;
+
+}
+.commentimg img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px gray;
+
+}
+.comment{
+    margin: 20px;
+    border:1px solid pink;
+    width: 100%;
+    box-shadow: 10px 10px 10px pink;
+    background-color: rgb(186, 180, 189);
+    border-radius: 20px;
+    
+}
