@@ -1,29 +1,21 @@
-import React, { useState, useEffect,value } from 'react';
-import Comments from '../Comments/Comments';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Comments from '../Comments/Comments';
 
-const Comment = (props) => {
+const Comment = () => {
     const {id} = useParams();
-    const [comment, setComment] = useState([]);
-    const [pic, setPic] = useState([]);
-
+    const [comment,setComment] = useState([]);
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/comments/`)
+        fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
         .then(res => res.json())
-        .then(data => setComment(data));
-        console.log(comment)
-
+        .then(data => setComment(data))
     },[]);
-    
-    let comments = comment.slice(0,30);
-    
+    console.log(comment);
     return (
         <div>
             {
-
-                comments.map(comments => <Comments comments={comments}></Comments>)
-            } 
-          
+                comment.map(comments => <Comments comments={comments}></Comments>)
+            }
         </div>
     );
 };

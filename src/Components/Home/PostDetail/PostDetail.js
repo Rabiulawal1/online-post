@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Comment from '../Comment/Comment';
 import './PostDetail.css';
+import Comments from '../Comments/Comments';
 
 const PostDetail = () => {
     const {id} = useParams();
@@ -15,15 +16,23 @@ const PostDetail = () => {
     },[]);
     const history = useHistory();
     let handleclick = (id) =>{
-    history.push("/comments");
+        history.push(`/comments/${id}`);
   }
+  const [comment,setComment] = useState([]);
+  useEffect(() => {
+      fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`)
+      .then(res => res.json())
+      .then(data => setComment(data))
+  },[]);
     return (
         <div className="post">
             <h3>  Post details: </h3>
             <h5>   {post.body}</h5>
-            <Button variant="contained" color="secondary" onClick={()=>handleclick(id)}>
-                 Comment
-            </Button>
+            <div>
+            {
+                comment.map(comments => <Comments comments={comments}></Comments>)
+            }
+        </div>
          
         </div>
     );

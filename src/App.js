@@ -28,7 +28,7 @@ function App() {
           <Route path="/details/:id">
             <PostDetail></PostDetail>
           </Route>
-          <Route path="/comments">
+          <Route path="/comments/:id">
             <Comment></Comment>
           </Route>
           <Route exact path="/">
